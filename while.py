@@ -62,15 +62,46 @@ import time
 # print(f"Su credito es de {credito}")
 
 
-parameter1=int(input("Ingrese un número "))
-parameter2=int(input("Ingrese un segundo número (debe ser mayor que el primero)"))
-while parameter2<parameter1:
-    print("Debe ser mayor que el primero")
-    parameter2=int(input("Ingrese un segundo número"))
-rand_num=random.randint(parameter1,parameter2)
-for i in range(rand_num):
-    print("▄")
+# parameter1=int(input("Ingrese un número "))
+# parameter2=int(input("Ingrese un segundo número (debe ser mayor que el primero)"))
+# while parameter2<parameter1:
+#     print("Debe ser mayor que el primero")
+#     parameter2=int(input("Ingrese un segundo número"))
+# rand_num=random.randint(parameter1,parameter2)
+# for i in range(rand_num):
+#     print("▄")
 
-print(f"el ▄ fue impreso {rand_num} veces")
+# print(f"el ▄ fue impreso {rand_num} veces")
 
+# prom_global=0
+# suma=0
+# cant_alum=int(input("Ingrese la cantidad de alumnos: "))
+# for i in range(cant_alum):
+#     notas=int(input("ingrese la cantidad de notas"))
+#     for n in range(notas):
+#         nota=float(input(f"Ingrese la {n+1} nota"))
+#         suma=suma+nota
+#         prom=suma/notas
+#     prom_global=prom_global+prom
+# prom3=prom_global/cant_alum            
+# print(prom3)
 
+suma=0
+promedio=0
+all_prom=0
+alumnos=int(input("Ingrese la cantidad de alumnos: "))
+for i in range(alumnos):
+    notas=int(input(f"Ingrese la cantidad de notas de el {i+1} alumno"))
+    suma=0
+    for e in range(notas):
+        nota=float(input(f"Ingrese la nota {e+1} del {i+1} alumno"))
+        suma=suma+nota
+        prom=suma/notas
+    print(f"El promedio del alumno {i+1} es {prom}")
+    if prom>=4:
+        print(f"El alumno {i+1} Aprobó")
+    else:
+        print(f"El alumno {i+1} Reprobó")
+    promedio=promedio+prom
+all_prom=promedio/alumnos
+print(f"El promedio de todo los alumnos es {all_prom}")
