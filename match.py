@@ -177,3 +177,6 @@ while True:
             time.sleep(0.5)
             print("Seleccione una opción válida")
 
+
+
+#para cerrar un programa desde un submenu hay que importar sys y luego escribir sys.exit()
